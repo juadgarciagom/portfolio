@@ -1,0 +1,38 @@
+#inicio {
+    text-align: center;
+}
+body{
+    background-image: url(https://s1.1zoom.me/b6065/44/Apples_Colored_background_Book_Pencils_530559_1920x1080.jpg); 
+}
+#imagen {
+    animation-name: example;
+    animation-duration: 3s;
+    position: relative;
+}
+@keyframes example {
+    0% {left: -300px;}
+    50% {left: 0px}
+}
+.columnas {
+    margin: 10px;
+}
+
+.palabras {
+    animation-name: borde;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+@keyframes borde {
+    0% {border: dashed darkcyan;}
+    25% {border: thin yellow;}
+    50% {border: none;}
+    75% {border: thin purple;}
+    100% {border: dashed darkcyan;}
+}
+.parrafo {
+    margin: 15px 0px;
+}
+.imagentorre {
+    margin: 15px;
+}
