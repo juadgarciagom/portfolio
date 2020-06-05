@@ -26,6 +26,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+#back {
+  background: lightgrey;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -37,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   right: 15px;
   bottom: 15px;
-  background: #0563bb;
+  background: #0e3780;
   color: #fff;
   transition: display 0.5s ease-in-out;
   z-index: 99999;
@@ -52,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top:hover {
   color: #fff;
-  background: #0678e3;
+  background: #0e1657;
   transition: background 0.2s ease-in-out;
 }
 
@@ -165,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   font-size: 15px;
   border-radius: 50px;
-  background: #f2f3f5;
+  background: #e6e5e5;
   height: 56px;
   width: 100%;
   overflow: hidden;
@@ -193,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
   color: #fff;
-  background: #0563bb;
+  background: #111a69;
 }
 
 .nav-menu a:hover span, .nav-menu .active > a span, .nav-menu li:hover > a span {
@@ -238,7 +242,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-active .mobile-nav-toggle i {
-  color: #0563bb;
+  color: #111a69;
 }
 
 /*--------------------------------------------------------------
@@ -247,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right no-repeat;
+  background: url("../img/1.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -258,9 +262,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 1024px) {
+#hero {
+    background-attachment: fixed;
+  }
+}
+
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -270,7 +280,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 64px;
+  font-size: 55px;
   font-weight: 700;
   line-height: 56px;
   color: #45505b;
@@ -284,8 +294,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero p span {
-  color: #0563bb;
+  color: #0e3780;
   letter-spacing: 1px;
+  font-weight: 500;
 }
 
 #hero .social-links {
@@ -302,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .social-links a:hover {
-  color: #0563bb;
+  color: #0e3780;
 }
 
 @media (max-width: 992px) {
@@ -373,6 +384,9 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+#about {
+  background: white;
+}
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -398,6 +412,18 @@ section {
   margin-bottom: 0;
 }
 
+.section-title span {
+  position: absolute;
+  color: #eef0f2;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+
 /*--------------------------------------------------------------
 # Interests
 --------------------------------------------------------------*/
@@ -410,23 +436,37 @@ section {
   background: #fff;
 }
 
+.interests .section-title h3 {
+  padding-bottom: 0px;
+}
+
+.interests .section-title p {
+  padding-bottom: 20px;
+  text-align: left;
+}
+
 .interests .count-box i {
   position: absolute;
   top: -25px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: #0563bb;
+  background: #0d4e75;
   padding: 12px;
   color: #fff;
   border-radius: 50px;
 }
 
+.interests .count-box i:hover {
+  background: #111a69;
+}
+
 .interests .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
+  font-weight: 600;
 }
 
 /*--------------------------------------------------------------
@@ -461,20 +501,43 @@ section {
   width: 1px;
   height: 10px;
   transition: .9s;
-  background-color: #0563bb;
+  background-color: #0d4e75;
 }
 
-.section-title span {
-  position: absolute;
-  color: #eef0f2;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  font-weight: 700;
-  font-size: 52px;
-  text-transform: uppercase;
-  line-height: 0;
+.section-title h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  color: #45505b;
+  text-align: left;
 }
+
+.section-title h3::before {
+  content: '';
+  position: initial;
+  display: inline-flex;
+  width: 80px;
+  height: 2px;
+  background: #0e3780;
+  bottom: 1px;
+  margin-right: 10px;
+  left: calc(50% - 60px);
+}
+
+.skills-section h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  color: #45505b;
+  text-align: left;
+}
+
+
 
 
 /*--------------------------------------------------------------
@@ -491,7 +554,7 @@ section {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #0563bb;
+  border-left: 2px solid #0d4e75;
   position: relative;
 }
 
@@ -501,7 +564,7 @@ section {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #0563bb;
+  color: #0d4e75;
   margin-bottom: 10px;
 }
 
@@ -535,7 +598,7 @@ section {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #0563bb;
+  border: 2px solid #0d4e75;
 }
 
 /*--------------------------------------------------------------
@@ -569,7 +632,7 @@ section {
 }
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
-  color: #0563bb;
+  color: #0f5d8d;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -837,7 +900,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #0563bb;
+  color: #0e3780;
   float: left;
   width: 44px;
   height: 44px;
@@ -869,7 +932,7 @@ section {
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #0563bb;
+  background: #0d4e75;
   color: #fff;
 }
 
@@ -943,7 +1006,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: #0563bb;
+  background: #0e3780;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -952,7 +1015,7 @@ section {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #0678e3;
+  background: #0e1657;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1069,7 +1132,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #0563bb;
+  background: #044c8f;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1082,7 +1145,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #0678e3;
+  background: #0e3780;
   color: #fff;
   text-decoration: none;
 }
