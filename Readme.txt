@@ -1,4 +1,9 @@
-# Portfolio Final basado en template
+#Portfolio Final basado en template
 
-## subtitulo
+Acá encontrarán mi portafolio con algunos datos relevantes y mis últimos trabajos
+
+_Se aceptan cualquier tipo de sugerencias para mejorar_
+
+**Hecho por Juan David García**
+
 
